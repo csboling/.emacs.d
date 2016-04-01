@@ -2,8 +2,10 @@
   (require 'package)
 )
 (setq package-archives '(("gnu"       . "http://elpa.gnu.org/packages/")
-                         ("melpa"     . "http://stable.melpa.org/packages/")))
+                         ("melpa"     . "http://melpa.org/packages/")))
+(package-refresh-contents)
 (package-initialize)
 
-;(require 'tramp)
-;(require 'undo-tree)
+(eval-when-compile
+  (require 'use-package))
+(setq use-package-always-ensure t)

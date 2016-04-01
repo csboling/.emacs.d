@@ -3,7 +3,7 @@
 ;; TBD: stack handling
 ;; TBD: clear log before run
 (require 'json)
-(require 'simple-httpd)
+(use-package simple-httpd)
 
 (defvar karma-emacs-active-p t)
 (defvar karma-emacs-running-p nil)

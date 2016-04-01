@@ -1,4 +1,9 @@
-(projectile-global-mode)
-(setq projectile-completion-system 'helm)
-(helm-projectile-on)
-(setq projectile-indexing-method 'alien)
+(use-package projectile
+  :init
+  (projectile-global-mode 1))
+
+(use-package helm
+  :ensure projectile
+  :init
+  (setq projectile-completion-system 'helm)
+  (setq projectile-indexing-method 'alien))

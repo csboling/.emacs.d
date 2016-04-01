@@ -5,24 +5,17 @@
 (global-set-key "\C-cb" 'org-iswitchb)
 (setq org-todo-keywords    '((sequence "TODO" "STARTED" "WAITING" "DONE"))
       org-directory        "~/org"
-      org-mobile-directory "~/.org-mobile"
-)
+      org-mobile-directory "~/.org-mobile")
 (defadvice org-mobile-push
            (after org-copy-after-push ())
            (shell-command
              (concat "cp -R "
                      org-mobile-directory
-                     "/* `~/.dotfiles/find_phone.sh`/Phone/sched"
-             )
-           )
-)
+                     "/* `~/.dotfiles/find_phone.sh`/Phone/sched")))
 
 (defadvice org-mobile-pull
            (before org-copy-before-pull ())
            (shell-command
              (concat "cp -R"
                      "`~/.dotfiles/find_phone.sh`/Phone/sched/*"
-                     org-mobile
-             )
-           )
-)
+                     org-mobile)))

@@ -1,4 +1,4 @@
 (load-user-file "karma-emacs.el")
 (load-user-file "karma.el")
-(require 'karma)
+(use-package karma)
 (setq js-indent-level 2)
