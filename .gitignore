@@ -1,0 +1,7 @@
+*~
+*.desktop
+*.lock
+*.eld
+
+elpa/
+.python-environments/
