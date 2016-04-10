@@ -1,5 +1,4 @@
-(when (< emacs-major-version 23)
-  (require 'package))
+(require 'package)
 (setq package-archives '(("gnu"       . "http://elpa.gnu.org/packages/")
                          ("melpa"     . "http://melpa.org/packages/")))
 (package-refresh-contents)

@@ -3,7 +3,7 @@
 ;;   (typescript-auto-indent-flag nil))
 (use-package web-mode)
 (use-package tide
-  :init
+  :config
   (add-hook 'typescript-mode-hook
     (lambda ()
       (tide-setup)

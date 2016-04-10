@@ -25,6 +25,9 @@
        ((and (eq isdir nil) (string= (substring path -3) ".el"))
         (load (file-name-sans-extension fullpath)))))))
 
-(load-user-file "packages.el")
-(load-directory "~/.emacs.d/settings")
-(load-directory "~/.emacs.d/mode")
+;; (condition-case err
+;;  (progn
+   (load-user-file "packages.el")
+   (load-directory "~/.emacs.d/settings")
+   (load-directory "~/.emacs.d/mode") ;;)
+ ;; (error (message "Check ~/.emacs.d/README.md to perform necessary setup before launching Emacs.")))
