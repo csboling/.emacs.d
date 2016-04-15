@@ -23,7 +23,7 @@
   (add-hook 'python-mode-hook 'python--add-debug-highlight)
   :bind
   (:map python-mode-map
-   ("<f5" . python-insert-breakpoint)))
+   ("C-c C-k" . python-insert-breakpoint)))
 
 (use-package python-environment)
 
@@ -45,3 +45,18 @@
 (use-package py-autopep8
   :config
   (add-hook 'python-mode-hook 'py-autopep8-enable-on-save))
+
+;; ;; Edit docstrings in reStructuredText mode-line
+;; (use-package mmm-mode
+;;   :config
+;;   (setq mmm-global-mode 'maybe)
+;;   (mmm-add-classes
+;;    '((python-rst
+;;       :submode rst-mode
+;;       :face comment
+;;       :front "^ *\"\"\"[^\"]* *$"
+;;       :back "^ *\"\"\"$"
+;;       :include-front f
+;;       :include-back f
+;;       :end-not-begin t)))
+;;   (mmm-add-mode-ext-class 'python-mode nil 'python-rst))

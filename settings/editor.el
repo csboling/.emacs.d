@@ -1,3 +1,4 @@
+(tool-bar-mode -1)
 (setq gnus-verbose         10
       fill-column          80
       column-number-mode   t
@@ -14,10 +15,13 @@
   `((".*" ,temporary-file-directory t)))
 
 (use-package company
-  :init
+  :config
   (global-company-mode 1)
   (setq company-auto-complete t)
   (setq company-auto-complete-chars nil))
+(use-package yasnippet
+  :config
+  (yas-global-mode 1))
 (use-package undo-tree
   :init
   (global-undo-tree-mode 1))
@@ -25,5 +29,4 @@
   :init
   (add-hook 'text-mode-hook 'flyspell-mode))
 (use-package flycheck)
-
 (add-hook 'text-mode-hook 'turn-on-auto-fill)

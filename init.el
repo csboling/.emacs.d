@@ -31,3 +31,18 @@
    (load-directory "~/.emacs.d/settings")
    (load-directory "~/.emacs.d/mode") ;;)
  ;; (error (message "Check ~/.emacs.d/README.md to perform necessary setup before launching Emacs.")))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-enabled-themes (quote (tango-dark)))
+ '(global-hl-line-mode t)
+ '(global-hl-line-sticky-flag t)
+ '(hl-line-face (quote hl-line)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(hl-line ((t (:background "#500000")))))
