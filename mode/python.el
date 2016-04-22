@@ -42,9 +42,10 @@
 ;; Ignore the following errors:
 ;; E70  - Put semicolon-separated compound statement on separate lines
 ;; E301 - Put a blank line between a class declaration and its first method declaration.
-(use-package py-autopep8
-  :config
-  (add-hook 'python-mode-hook 'py-autopep8-enable-on-save))
+;; Unfortunately right now this manipulates the kill ring for reasons I don't fully understand
+;; (use-package py-autopep8
+;;   :config
+;;   (add-hook 'python-mode-hook 'py-autopep8-enable-on-save))
 
 ;; ;; Edit docstrings in reStructuredText mode-line
 ;; (use-package mmm-mode
