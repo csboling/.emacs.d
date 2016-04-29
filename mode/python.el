@@ -20,19 +20,13 @@
 
 (use-package python-mode
   :config
-  (add-hook 'python-mode-hook 'python--add-debug-highlight)
-  :bind
-  (:map python-mode-map
-   ("C-c C-k" . python-insert-breakpoint)))
+  (add-hook 'python-mode-hook 'python--add-debug-highlight))
 
 (use-package python-environment)
 
 (use-package jedi-core)
 
-(use-package pyvenv
-  :bind
-  (:map pyvenv-mode-map
-   ("C-c C-z" . pyvenv-restart-python)))
+(use-package pyvenv)
 
 (use-package elpy
   :config
