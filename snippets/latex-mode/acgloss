@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: acgloss
+# key: gla
+# --
+\newglossaryentry{${1:label}g}{
+  name={${1:$(upcase yas-text)}},
+  description={$3}
+}
+\newglossaryentry{$1}{
+  type=\acronymtype,
+  name={$1},
+  description={$2},
+  first={$2 ($1)\glsadd{$1g}},
+  see=[Glossary:]{$1g}
+}

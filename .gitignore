@@ -3,6 +3,7 @@
 *.lock
 *.eld
 
+snippets/
 server/
 elpa/
 .python-environments/
