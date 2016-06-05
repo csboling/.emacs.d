@@ -1,0 +1,26 @@
+# -*- mode: snippet -*-
+# name: Angular 2 component
+# key: cmp
+# --
+import { Component } from '@angular/core';
+
+declare var __moduleName: any;
+import styles from './$1.component.scss!';
+@Component({
+     moduleId: __moduleName,
+     selector: '$1',
+     templateUrl: '$1.component.html',
+     styles: [
+         styles
+     ],
+     directives: [
+        $2
+     ],
+     providers: [
+        $3
+     ],
+})
+export class ${1:$(spinal-to-pascal-case)} {
+    constructor (${3:$(ng2-dependency-injection)}) {
+    }
+}

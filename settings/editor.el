@@ -9,6 +9,10 @@
 (show-paren-mode 1)
 (global-linum-mode 1)
 
+(setq global-hl-line-mode t
+      global-hl-line-sticky-flag t
+      hl-line-face (quote hl-line))
+
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (global-auto-revert-mode t)
 

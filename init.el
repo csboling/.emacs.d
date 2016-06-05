@@ -25,12 +25,14 @@
        ((and (eq isdir nil) (string= (substring path -3) ".el"))
         (load (file-name-sans-extension fullpath)))))))
 
-;; (condition-case err
-;;  (progn
-   (load-user-file "packages.el")
-   (load-directory "~/.emacs.d/settings")
-   (load-directory "~/.emacs.d/mode") ;;)
+
+(load-user-file "packages.el")
+(load-directory "~/.emacs.d/settings")
+(load-directory "~/.emacs.d/mode")
+(load-directory "~/.emacs.d/prog")
  ;; (error (message "Check ~/.emacs.d/README.md to perform necessary setup before launching Emacs.")))
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -40,9 +42,9 @@
    (quote
     ("--line-number" "--smart-case" "--nogroup" "--vimgrep" "--column" "--stats" "--")))
  '(custom-enabled-themes (quote (tango-dark)))
- '(global-hl-line-mode t)
- '(global-hl-line-sticky-flag t)
- '(hl-line-face (quote hl-line)))
+ '(elpy-rpc-python-command
+   "c:/Users/csboling/AppData/Local/Programs/Python/Python35/python.exe")
+ '(typescript-auto-indent-flag nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

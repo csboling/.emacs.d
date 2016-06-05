@@ -26,12 +26,17 @@
 
 (use-package jedi-core)
 
-(use-package pyvenv)
+(use-package pyvenv
+  :config
+  (let ((workon-home (expand-file-name "~/.pyvenv/versions")))
+    (setenv "WORKON_HOME" workon-home)
+    (setenv "VIRTUALENVWRAPPER_HOOK_DIR" workon-home)))
 
 (use-package elpy
   :config
   (elpy-enable)
-  (setq elpy-rpc-backend "jedi"))
+  (setq elpy-rpc-backend "jedi"
+        elpy-test-runner (quote elpy-test-pytest-runner)))
 
 ;; Ignore the following errors:
 ;; E70  - Put semicolon-separated compound statement on separate lines
