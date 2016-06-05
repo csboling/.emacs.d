@@ -36,5 +36,11 @@ constructor arguments for Angular 2 dependency injection."
     ""
     (let ((yas-text "")) (ng2-dependency-injection))))
   (should (equal
+    "private http: Http"
+    (let ((yas-text "Http")) (ng2-dependency-injection))))
+  (should (equal
+    "private http: Http"
+    (let ((yas-text "Http,")) (ng2-dependency-injection))))
+  (should (equal
     "private http: Http, private routeSegment: RouteSegment"
     (let ((yas-text "    Http,\n  RouteSegment")) (ng2-dependency-injection)))))
