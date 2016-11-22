@@ -6,3 +6,4 @@
 server/
 elpa/
 .python-environments/
+.yas-compiled-snippets.el

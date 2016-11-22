@@ -22,5 +22,6 @@ import styles from './$1.component.scss!';
 })
 export class ${1:$(spinal-to-pascal-case)} {
     constructor (${3:$(ng2-dependency-injection)}) {
+        $0
     }
 }

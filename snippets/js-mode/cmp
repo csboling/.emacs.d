@@ -1,0 +1,21 @@
+# -*- mode: snippet -*-
+# name: React component
+# key: cmp
+# --
+import React, {Component, PropTypes} from 'react';
+
+export default class $1 extends Component {
+  static propTypes = {
+    ${2:$(react-prop-types)}
+  };
+
+  render() {
+    const {
+      $2
+    } = this.props;
+
+    return (
+      $0
+    );
+  }
+}

@@ -28,8 +28,7 @@
   (setq company-auto-complete-chars nil))
 (use-package yasnippet
   :config
-  (yas-global-mode 1)
-  (yas-indent-line 'auto))
+  (yas-global-mode 1))
 (use-package undo-tree
   :init
   (global-undo-tree-mode 1))
@@ -40,3 +39,5 @@
   (add-hook 'text-mode-hook 'flyspell-mode))
 (use-package flycheck)
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
+
+(use-package multiple-cursors)
